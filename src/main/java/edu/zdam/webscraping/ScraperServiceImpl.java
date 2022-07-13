@@ -25,14 +25,15 @@ public class ScraperServiceImpl implements ScraperService {
     public Set<ResponseDTO> getAllRealEstates() {
         try {
             HashSet<ResponseDTO> responseDTOS = new HashSet<>();
-            String url = urls.get(0);
-            ChromeDriver driver = new ChromeDriver();
-            driver.get(url);
-            String xpathOfferCount = "/html/body/div[1]/div[1]/main/div[1]/div[3]/div[1]/div[1]/div/div/div[1]/strong/span[2]";
-            WebElement element = driver.findElement(By.xpath(xpathOfferCount));
-            ResponseDTO responseDTO = new ResponseDTO();
-            responseDTO.setTitle(element.getText());
-            responseDTOS.add(responseDTO);
+//            String url = urls.get(0);
+//            ChromeDriver driver = new ChromeDriver();
+//            driver.get(url);
+//            String xpathOfferCount = "/html/body/div[1]/div[1]/main/div[1]/div[3]/div[1]/div[1]/div/div/div[1]/strong/span[2]";
+//            WebElement element = driver.findElement(By.xpath(xpathOfferCount));
+//            ResponseDTO responseDTO = new ResponseDTO();
+//            responseDTO.setTitle(element.getText());
+//            responseDTOS.add(responseDTO);
+            System.out.println(urls.size());
             return responseDTOS;
 
         } catch(Exception e) {
